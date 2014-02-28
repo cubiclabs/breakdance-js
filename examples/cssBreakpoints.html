@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie lt-ie10 lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie lt-ie10 lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie lt-ie10 lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="no-js ie lt-ie10 ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>breakdance.js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="cleartype" content="on" />
+	
+		
+	<!-- JavaScript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../breakdance-1.0.1.min.js"></script>
+	<script src="scripts/app.js"></script>
+
+	<style>
+		/* this defines breakpoint 'tags' via css media queries */
+		body:after {content: 'default'; position: absolute; left: -99999px;}
+		@media screen and (min-width:1101px){
+			body:after {content: 'large';}
+		}
+		@media screen and (min-width:801px) and (max-width: 1100px){
+			body:after {content: 'default';}
+		}
+		@media screen and (min-width:601px) and (max-width: 800px){
+			body:after {content: 'tablet';}
+		}
+		@media all and (max-width: 600px) {
+			body:after {content: 'mobile';}
+		}
+
+
+		.testBox{background: yellowGreen;}
+		.mobile .testBox{background: red;}
+		.tablet .testBox{background: orange;}
+		.large .testBox{background: green;}
+	</style>
+	
+
+	
+</head>
+
+<body><div id="body">
+
+<h1 class="testBox">
+	Hello World
+</h1>
+
+<!-- these elements are just used to display some information -->
+<div id="msg"></div><div id="msg2"></div><div id="msg3"></div>
+
+</div></body>
+</html>
