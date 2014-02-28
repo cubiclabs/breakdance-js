@@ -128,7 +128,7 @@ var breakdance = function(window, document, $){
 
 	/**
 	* This is the method that gets called to test our breakpoints. 
-	* If we have script based breakpoints defined we use thos in preference to any css based ones
+	* If we have script based breakpoints defined we use those in preference to any css based ones
 	* 
 	* @method triggerBreakpoint
 	* @return Void
@@ -166,7 +166,7 @@ var breakdance = function(window, document, $){
 	};
 
 	/**
-	* Defines the interval timer object that test for changes in font size
+	* Defines the interval timer object that tests for changes in font size
 	* 
 	* @method startFontWatch
 	* @return Void
@@ -176,7 +176,7 @@ var breakdance = function(window, document, $){
 	};
 
 	/**
-	* Clears the interval timer object used to test for changes in fonr size
+	* Clears the interval timer object used to test for changes in font size
 	* 
 	* @method stopFontWatch
 	* @return Void
