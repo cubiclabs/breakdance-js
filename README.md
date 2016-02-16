@@ -6,9 +6,9 @@ JavaScript defined breakpoints that can be used to trigger events and control CS
 The thinking here is that you can:
 
 1. Use these events to initiate or destroy interface elements depending on the size of the screen or as a browser window resizes either due to a change in font size, orientation or the user dragging a browser edge to resize, etc.
-2. Use the CSS classes as a shothand for media queries.
+2. Use the CSS classes as a shorthand for media queries.
 
-You can view [an example](www.cubicstate.com/breakdance/breakdance.html) to see this working.
+You can view [an example](http://www.cubicstate.com/breakdance/breakdance.html) to see this working.
 
 Setup
 -----
@@ -43,7 +43,7 @@ breakdance.setBreakpoint({
 });
 ````
 
-This method takes a single argument which is an object that defined the breakpoints like so:
+This method takes a single argument which is an object that defines the breakpoints:
 ```JavaScript
 {
 	"breakpointName1": [minWidth, maxWidth],
@@ -57,8 +57,8 @@ Events
 
 The following events get triggered:
 
-* [breakpoint name]On - triggered when a breakpoint becomes active
-* [breakpoint name]Off - triggered when a breakpoint becomes inactive
+* [breakpointName]On - triggered when a breakpoint becomes active
+* [breakpointName]Off - triggered when a breakpoint becomes inactive
 * breakpoint - triggered when a breakpoint event above occurs
 
 These can be used in the following way:
