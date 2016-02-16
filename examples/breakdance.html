@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie lt-ie10 lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]> <html lang="en" class="no-js ie lt-ie10 lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie lt-ie10 lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie lt-ie10 ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title> Breakdance </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+<style>
+	#msg{font-size: 32px; padding: 20px; margin: 20px 0; border: 1px solid #000;}
+	.mobile.mobileSmall #msg{background: orange;}
+	.mobile #msg{background: red;}
+	.tablet #msg{background: pink;}
+	.default #msg{background: green;}
+	.large #msg{background: cyan;}
+
+	#events{font-family: courier; font-size: 14px; padding: 20px;}
+</style>
+
+<script src="../breakdance-2.0.2.js"></script>
+<script>
+
+	breakdance.on("mobileSmallOn", function(){showEvent("mobileSmallOn")});
+	breakdance.on("mobileSmallOff", function(){showEvent("mobileSmallOff")});
+	breakdance.on("mobileOn", function(){showEvent("mobileOn")});
+	breakdance.on("mobileOff", function(){showEvent("mobileOff")});
+	breakdance.on("tabletOn", function(){showEvent("tabletOn")});
+	breakdance.on("tabletOff", function(){showEvent("tabletOff")});
+	breakdance.on("defaultOn", function(){showEvent("defaultOn")});
+	breakdance.on("defaultOff", function(){showEvent("defaultOff")});
+	breakdance.on("largeOn", function(){showEvent("largeOn")});
+	breakdance.on("largeOff", function(){showEvent("largeOff")});
+	breakdance.on("breakpoint", function(){
+		document.getElementById("msg").innerHTML = document.getElementsByTagName("body")[0].className;
+	});
+
+	showEvent = function(e){
+		var el = document.createElement("div")
+		el.innerHTML = e;
+		var eventWrapper = document.getElementById("events");
+		eventWrapper.appendChild(el);
+		setTimeout(function(){
+			eventWrapper.removeChild(el)
+		}, 5000);
+	}
+
+</script>
+</head>
+<body>
+
+
+<h1>Hello Breakdance</h1>
+<div id="msg"></div>
+<div id="events"></div>
+
+
+</body>
+</html>
